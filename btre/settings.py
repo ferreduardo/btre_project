@@ -149,3 +149,9 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'jr.eduardof@gmail.com'
 EMAIL_HOST_PASSWORD = 'Ed32244983'
 EMAIL_USE_TLS=True
+
+# Protect Django settings file
+try:
+    from .local_settings import *
+except ImportError:
+    pass
