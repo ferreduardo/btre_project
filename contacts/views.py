@@ -35,7 +35,7 @@ def contact(request):
         send_mail(
                 'BT Real Estate - Property Inquiry: ' + listing,
                 '## BT REAL ESTATE ##' + '\n \n There has been an inquiry for: ' + listing + '. \n \n From: ' + name + ' ( ' + email + ' / ' + phone + ' )' + 
-                '\n Message: ' + message + ' \n \n Sign into the admin panel for more info.' + ' \n https://www.btrealestate.xyz',
+                '\n \n Message: ' + message + ' \n \n Sign into the admin panel for more info.' + ' \n https://www.btrealestate.xyz',
                 'jr.eduardof@gmail.com',
                 ['eduardo.jr@me.com'], #[realtor_email, 'eduardo.jr@me.com'],
                 fail_silently=False
