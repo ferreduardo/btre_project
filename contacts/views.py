@@ -15,7 +15,7 @@ def contact(request):
         phone = request.POST['phone']
         message = request.POST['message']
         user_id = request.POST['user_id']
-        realtor_email = request.POST['realtor_email']
+        #realtor_email = request.POST['realtor_email']
         
 
         # Check if user has made inquiry already
@@ -33,8 +33,8 @@ def contact(request):
 
         # Send email
         send_mail(
-                'Property Listing Inquiry',
-                '## BT REAL ESTATE ##' + '\n \n There has been an inquiry for ' + listing + '. \n \n From: ' + name + ' ( ' + email + ' / ' + phone + ' )' + 
+                'BT Real Estate - Property Inquiry: ' + listing,
+                '## BT REAL ESTATE ##' + '\n \n There has been an inquiry for: ' + listing + '. \n \n From: ' + name + ' ( ' + email + ' / ' + phone + ' )' + 
                 '\n Message: ' + message + ' \n \n Sign into the admin panel for more info.' + ' \n https://www.btrealestate.xyz',
                 'jr.eduardof@gmail.com',
                 ['eduardo.jr@me.com'], #[realtor_email, 'eduardo.jr@me.com'],
